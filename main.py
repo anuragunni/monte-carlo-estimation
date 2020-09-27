@@ -1,14 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Initialize the number the iterations
 N = 100000
 count = 0
 i = 1
 
+# Store the coordinates of the points inside the circle and square
 circlex = []
 circley = []
 squarex = []
 squarey = []
+
 
 while i <= N:
 	x = np.random.uniform(-1,1)
@@ -23,7 +26,10 @@ while i <= N:
 		squarey.append(y)
 	i += 1
 
+# Calculate and print the value of pi
 print(4*(len(circlex))/N)
+
+# Plot the graph
 plt.plot(squarex, squarey, 'b.')
 plt.plot(circlex, circley, 'g.')
 plt.title("Estimating value of pi using Monte Carlo simulation")
